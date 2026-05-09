@@ -103,13 +103,13 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
 <a href="#home" className="flex items-center">
   <Image
-    src="ChatGPT Image May 6, 2026, 07_56_59 AM"
-    alt="AC Mobile Fleet Service"
-    width={260}
-    height={100}
-    priority
-    className="h-16 w-auto"
-  />
+  src="/images/logo.png"
+  alt="AC Mobile Fleet Service"
+  width={260}
+  height={100}
+  priority
+  className="h-16 w-auto"
+/>
 </a>
           <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-zinc-300 lg:flex">
             <a href="#services" className="hover:text-orange-500">Services</a>
