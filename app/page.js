@@ -108,7 +108,7 @@ export default function Home() {
   width={260}
   height={100}
   priority
-  className="h-32 w-auto"
+  className="h-40 w-auto"
 />
 </a>
           <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-zinc-300 lg:flex">
