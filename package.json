@@ -2,23 +2,21 @@
   "name": "ac-mobile-fleet-service-website",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@next/font": "latest",
-    "next": "15.1.6",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "next": "16.2.6",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "autoprefixer": "10.4.20",
     "postcss": "8.4.49",
-    "tailwindcss": "3.4.17",
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.1.6"
+    "tailwindcss": "3.4.17"
   }
 }
