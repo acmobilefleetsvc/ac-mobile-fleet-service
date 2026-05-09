@@ -99,10 +99,16 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <header className="sticky top-0 z-50 border-b border-orange-600/30 bg-black/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <a href="#home" className="flex items-center gap-3">
-            <div className="flex h-12 w-16 items-center justify-center rounded bg-zinc-950 ring-2 ring-orange-600"><Icon name="truck" className="text-orange-500" size={34} /></div>
-            <div><div className="text-2xl font-black uppercase leading-none tracking-wide text-orange-600">AC Mobile</div><div className="text-xs font-bold uppercase tracking-[0.35em] text-white">Fleet Service LLC</div></div>
-          </a>
+<a href="#home" className="flex items-center">
+  <Image
+    src="ChatGPT Image May 6, 2026, 07_56_59 AM"
+    alt="AC Mobile Fleet Service"
+    width={260}
+    height={100}
+    priority
+    className="h-16 w-auto"
+  />
+</a>
           <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-zinc-300 lg:flex">
             <a href="#services" className="hover:text-orange-500">Services</a>
             <a href="#fleet" className="hover:text-orange-500">Fleet Maintenance</a>
