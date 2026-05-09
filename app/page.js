@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const phone = '(937) 516-6739';
 const phoneHref = 'tel:9375166739';
 const email = 'Maintenance@ACMobileFleetSVC.Com';
