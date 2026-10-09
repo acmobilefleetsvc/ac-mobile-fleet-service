@@ -64,8 +64,8 @@ const roadsideItems = [
 function CTAButton({ children, type = 'primary' }) {
   const href = type === 'phone' ? phoneHref : '#contact';
   const classes = type === 'outline'
-    ? 'border border-orange-500 text-white hover:bg-orange-600'
-    : 'bg-orange-600 text-black shadow-lg shadow-orange-950/40 hover:bg-orange-500';
+    ? 'border border-amber-500 text-white hover:bg-amber-400'
+    : 'bg-amber-400 text-black shadow-lg shadow-amber-950/40 hover:bg-amber-300';
 
   return <a href={href} className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-black uppercase tracking-wide transition hover:scale-[1.02] ${classes}`}>{children}</a>;
 }
@@ -73,7 +73,7 @@ function CTAButton({ children, type = 'primary' }) {
 function SectionTitle({ eyebrow, title, subtitle }) {
   return (
     <div className="mx-auto mb-10 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-orange-500">{eyebrow}</p>
+      <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-amber-400">{eyebrow}</p>
       <h2 className="text-4xl font-black uppercase tracking-tight text-white md:text-6xl">{title}</h2>
       {subtitle ? <p className="mt-4 text-lg text-zinc-300">{subtitle}</p> : null}
     </div>
@@ -82,8 +82,8 @@ function SectionTitle({ eyebrow, title, subtitle }) {
 
 function ServiceCard({ icon, title, text }) {
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-6 shadow-xl transition hover:border-orange-500/70 hover:bg-black">
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-orange-600 text-black">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-6 shadow-xl transition hover:border-amber-500/70 hover:bg-black">
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-amber-400 text-black">
         <Icon name={icon} size={30} />
       </div>
       <h3 className="mb-2 text-xl font-black uppercase text-white">{title}</h3>
@@ -93,50 +93,50 @@ function ServiceCard({ icon, title, text }) {
 }
 
 function CheckItem({ children }) {
-  return <li className="flex gap-3 text-zinc-200"><Icon name="check" className="mt-1 shrink-0 text-orange-500" size={22} /><span>{children}</span></li>;
+  return <li className="flex gap-3 text-zinc-200"><Icon name="check" className="mt-1 shrink-0 text-amber-400" size={22} /><span>{children}</span></li>;
 }
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="sticky top-0 z-50 border-b border-orange-600/30 bg-black/90 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-amber-600/30 bg-black/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
 <a href="#home" className="flex items-center">
   <Image
-  src="/images/logo.png"
+  src="/images/brand-reference.webp"
   alt="AC Mobile Fleet Service"
-  width={260}
-  height={100}
+  width={320}
+  height={180}
   priority
-  className="h-40 w-auto"
+  className="h-auto w-40 sm:w-48"
 />
 </a>
           <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-zinc-300 lg:flex">
-            <a href="#services" className="hover:text-orange-500">Services</a>
-            <a href="#fleet" className="hover:text-orange-500">Fleet Maintenance</a>
-            <a href="#roadside" className="hover:text-orange-500">Roadside</a>
-            <a href="#area" className="hover:text-orange-500">Service Area</a>
-            <a href="#contact" className="hover:text-orange-500">Contact</a>
+            <a href="#services" className="hover:text-amber-400">Services</a>
+            <a href="#fleet" className="hover:text-amber-400">Fleet Maintenance</a>
+            <a href="#roadside" className="hover:text-amber-400">Roadside</a>
+            <a href="#area" className="hover:text-amber-400">Service Area</a>
+            <a href="#contact" className="hover:text-amber-400">Contact</a>
           </nav>
-          <a href={phoneHref} className="hidden rounded-xl bg-orange-600 px-5 py-3 font-black text-black lg:inline-flex">{phone}</a>
-          <Icon name="menu" className="lg:hidden" />
+          <a href={phoneHref} className="hidden rounded-xl bg-amber-400 px-5 py-3 font-black text-black lg:inline-flex">{phone}</a>
+          <a href={phoneHref} className="rounded-lg bg-amber-400 px-3 py-3 text-sm font-black text-black lg:hidden" aria-label="Call AC Mobile Fleet Service">Call Now</a>
         </div>
       </header>
 
       <main id="home">
         <section className="relative overflow-hidden border-b border-zinc-900">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(234,88,12,.38),transparent_30%),linear-gradient(120deg,#000_0%,#080808_45%,#1f1f1f_100%)]" />
-          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 md:grid-cols-[1.05fr_.95fr] md:py-28">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(153,27,27,.23),transparent_30%),linear-gradient(120deg,#000_0%,#080808_45%,#1f1f1f_100%)]" />
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 md:grid-cols-[1.05fr_.95fr] md:py-20">
             <div>
-              <p className="mb-4 inline-flex rounded-full border border-orange-600/60 px-4 py-2 text-sm font-black uppercase tracking-[0.25em] text-orange-500">Keep Your Fleet Moving</p>
-              <h1 className="text-6xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-8xl">Heavy Duty<br /><span className="text-orange-600">Truck & Trailer</span><br />Repair</h1>
+              <p className="mb-4 text-sm font-black uppercase tracking-[0.25em] text-amber-400">Southwest Ohio • Mobile Fleet Service</p>
+              <h1 className="text-6xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-7xl">Heavy Duty<br /><span className="text-amber-400">Truck & Trailer</span><br />Repair</h1>
               <p className="mt-7 max-w-2xl text-xl font-semibold text-zinc-200 md:text-2xl">Mobile medium and heavy duty truck repair, roadside assistance, fleet maintenance, DOT inspections, and trailer service across Southwest Ohio.</p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row"><CTAButton type="phone"><Icon name="phone" size={20} /> Call Now</CTAButton><CTAButton type="outline">Request Service <Icon name="arrow" size={18} /></CTAButton></div>
-              <div className="mt-8 grid gap-3 text-sm font-bold uppercase text-zinc-300 sm:grid-cols-3"><span className="flex items-center gap-2"><Icon name="clock" className="text-orange-500" /> Fast Response</span><span className="flex items-center gap-2"><Icon name="map" className="text-orange-500" /> On-Site Repairs</span><span className="flex items-center gap-2"><Icon name="shield" className="text-orange-500" /> DOT Focused</span></div>
+              <div className="mt-8 grid gap-3 text-sm font-bold uppercase text-zinc-300 sm:grid-cols-3"><span className="flex items-center gap-2"><Icon name="clock" className="text-amber-400" /> Fast Response</span><span className="flex items-center gap-2"><Icon name="map" className="text-amber-400" /> On-Site Repairs</span><span className="flex items-center gap-2"><Icon name="shield" className="text-amber-400" /> DOT Focused</span></div>
             </div>
-            <div className="rounded-3xl border border-orange-600/50 bg-zinc-950/80 p-6 shadow-2xl shadow-orange-950/30">
+            <div className="hero-brand rounded-2xl border border-zinc-800 bg-black p-3 shadow-2xl"><Image src="/images/brand-reference.webp" alt="AC Mobile Fleet Service LLC — black semi truck with an American flag, serving Southwest Ohio" width={2048} height={1152} priority className="h-auto w-full rounded-xl" />
               <div className="rounded-2xl bg-gradient-to-br from-zinc-900 via-black to-zinc-950 p-8">
-                <Icon name="truck" className="mb-5 text-orange-500" size={84} />
+                
                 <h2 className="text-3xl font-black uppercase text-white">We Come To You.</h2>
                 <p className="mt-3 text-zinc-300">Professional mobile service for fleets, owner-operators, trucks, trailers, roadside breakdowns, and scheduled maintenance.</p>
                 <ul className="mt-6 space-y-3"><CheckItem>All makes and models</CheckItem><CheckItem>Mobile diagnostics and repair</CheckItem><CheckItem>Preventive maintenance programs</CheckItem><CheckItem>Serving up to 100 miles from Dayton</CheckItem></ul>
@@ -147,16 +147,16 @@ export default function Home() {
 
         <section id="services" className="px-4 py-20"><SectionTitle eyebrow="What We Do" title="Mobile Repair Services" subtitle="Built for medium and heavy duty trucks, trailers, fleets, RVs, travel trailers, and commercial equipment." /><div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-4">{services.map((service) => <ServiceCard key={service.title} icon={service.icon} title={service.title} text={service.text} />)}</div></section>
 
-        <section id="roadside" className="bg-zinc-950 px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-orange-500">Roadside Assistance</p><h2 className="text-5xl font-black uppercase leading-none md:text-7xl">Do Not Get Stuck.<br /><span className="text-orange-600">We Will Get You Unstuck.</span></h2><p className="mt-6 text-lg text-zinc-300">When your truck or trailer is down, every minute matters. We provide mobile heavy duty roadside assistance to help diagnose the issue and get you moving safely.</p><div className="mt-8"><CTAButton type="phone"><Icon name="phone" size={20} /> Call {phone}</CTAButton></div></div><div className="rounded-3xl border border-orange-600/40 bg-black p-8"><h3 className="mb-6 text-2xl font-black uppercase text-white">We Can Help With:</h3><div className="grid gap-4 sm:grid-cols-2">{roadsideItems.map((item) => <div key={item} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 font-bold uppercase text-zinc-200"><span className="text-orange-500">✓</span> {item}</div>)}</div></div></div></section>
+        <section id="roadside" className="bg-zinc-950 px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-amber-400">Roadside Assistance</p><h2 className="text-5xl font-black uppercase leading-none md:text-7xl">Do Not Get Stuck.<br /><span className="text-amber-400">We Will Get You Unstuck.</span></h2><p className="mt-6 text-lg text-zinc-300">When your truck or trailer is down, every minute matters. We provide mobile heavy duty roadside assistance to help diagnose the issue and get you moving safely.</p><div className="mt-8"><CTAButton type="phone"><Icon name="phone" size={20} /> Call {phone}</CTAButton></div></div><div className="rounded-2xl border border-amber-600/40 bg-black p-8"><h3 className="mb-6 text-2xl font-black uppercase text-white">We Can Help With:</h3><div className="grid gap-4 sm:grid-cols-2">{roadsideItems.map((item) => <div key={item} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 font-bold uppercase text-zinc-200"><span className="text-amber-400">✓</span> {item}</div>)}</div></div></div></section>
 
-        <section id="fleet" className="px-4 py-20"><SectionTitle eyebrow="Fleet Maintenance" title="Prevent Breakdowns Before They Happen" subtitle="Custom preventive maintenance programs for powered units and trailers." /><div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3"><div className="rounded-3xl border border-orange-600/50 bg-zinc-950 p-7 lg:col-span-2"><h3 className="text-3xl font-black uppercase text-orange-500">PM Services Include</h3><div className="mt-6 grid gap-8 md:grid-cols-2"><div><h4 className="mb-4 text-xl font-black uppercase">Powered Unit PM</h4><ul className="space-y-3"><CheckItem>Oil and filter change</CheckItem><CheckItem>Fuel filter replacement</CheckItem><CheckItem>Inspect brakes, suspension and steering</CheckItem><CheckItem>Inspect belts, hoses and wiring</CheckItem><CheckItem>Grease unit complete</CheckItem><CheckItem>Battery service and load test</CheckItem></ul></div><div><h4 className="mb-4 text-xl font-black uppercase">Trailer PM</h4><ul className="space-y-3"><CheckItem>Inspect brakes and air system</CheckItem><CheckItem>Inspect suspension and components</CheckItem><CheckItem>Grease unit front to rear</CheckItem><CheckItem>Inspect lights and wiring</CheckItem><CheckItem>Check landing gear and kingpin</CheckItem><CheckItem>Inspect doors, hinges and lockrods</CheckItem></ul></div></div></div><div className="rounded-3xl bg-orange-600 p-7 text-black"><h3 className="text-3xl font-black uppercase">Regular PM Keeps Your Fleet:</h3><ul className="mt-6 space-y-4 font-black uppercase"><li>✓ Reducing breakdowns</li><li>✓ Extending equipment life</li><li>✓ Improving safety</li><li>✓ Lowering repair costs</li><li>✓ Staying DOT compliant</li><li>✓ Moving and earning</li></ul></div></div></section>
+        <section id="fleet" className="px-4 py-20"><SectionTitle eyebrow="Fleet Maintenance" title="Prevent Breakdowns Before They Happen" subtitle="Custom preventive maintenance programs for powered units and trailers." /><div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3"><div className="rounded-2xl border border-amber-600/50 bg-zinc-950 p-7 lg:col-span-2"><h3 className="text-3xl font-black uppercase text-amber-400">PM Services Include</h3><div className="mt-6 grid gap-8 md:grid-cols-2"><div><h4 className="mb-4 text-xl font-black uppercase">Powered Unit PM</h4><ul className="space-y-3"><CheckItem>Oil and filter change</CheckItem><CheckItem>Fuel filter replacement</CheckItem><CheckItem>Inspect brakes, suspension and steering</CheckItem><CheckItem>Inspect belts, hoses and wiring</CheckItem><CheckItem>Grease unit complete</CheckItem><CheckItem>Battery service and load test</CheckItem></ul></div><div><h4 className="mb-4 text-xl font-black uppercase">Trailer PM</h4><ul className="space-y-3"><CheckItem>Inspect brakes and air system</CheckItem><CheckItem>Inspect suspension and components</CheckItem><CheckItem>Grease unit front to rear</CheckItem><CheckItem>Inspect lights and wiring</CheckItem><CheckItem>Check landing gear and kingpin</CheckItem><CheckItem>Inspect doors, hinges and lockrods</CheckItem></ul></div></div></div><div className="rounded-2xl bg-amber-400 p-7 text-black"><h3 className="text-3xl font-black uppercase">Regular PM Keeps Your Fleet:</h3><ul className="mt-6 space-y-4 font-black uppercase"><li>✓ Reducing breakdowns</li><li>✓ Extending equipment life</li><li>✓ Improving safety</li><li>✓ Lowering repair costs</li><li>✓ Staying DOT compliant</li><li>✓ Moving and earning</li></ul></div></div></section>
 
-        <section id="area" className="border-y border-zinc-800 bg-white px-4 py-16 text-black"><div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1fr_auto_1fr]"><div className="flex items-center gap-5"><Icon name="map" size={70} /><h2 className="text-3xl font-black uppercase md:text-4xl">Proudly Serving<br />Up To 100 Mile Radius Of <span className="text-orange-600">Dayton, Ohio</span></h2></div><div className="hidden h-24 w-px bg-zinc-300 md:block" /><div><h3 className="text-3xl font-black uppercase">Local Service.<br />Professional Results.</h3><p className="mt-2 text-xl font-black uppercase text-orange-600">Keep your fleet moving.</p></div></div></section>
+        <section id="area" className="border-y border-red-900 bg-zinc-900 px-4 py-16 text-white"><div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1fr_auto_1fr]"><div className="flex items-center gap-5"><Icon name="map" size={70} /><h2 className="text-3xl font-black uppercase md:text-4xl">Proudly Serving<br />Up To 100 Mile Radius Of <span className="text-amber-400">Dayton, Ohio</span></h2></div><div className="hidden h-24 w-px bg-red-800 md:block" /><div><h3 className="text-3xl font-black uppercase">Local Service.<br />Professional Results.</h3><p className="mt-2 text-xl font-black uppercase text-amber-400">Keep your fleet moving.</p></div></div></section>
 
-        <section id="contact" className="px-4 py-20"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2"><div><p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-orange-500">Contact</p><h2 className="text-5xl font-black uppercase md:text-7xl">We Are Just A Call Away.</h2><p className="mt-5 text-lg text-zinc-300">Need emergency service or want to set up fleet maintenance? Reach out and we will help get your equipment back on the road.</p><div className="mt-8 space-y-4 text-xl font-bold"><a href={phoneHref} className="flex items-center gap-4 hover:text-orange-500"><Icon name="phone" className="text-orange-500" /> {phone}</a><a href={`mailto:${email}`} className="flex items-center gap-4 hover:text-orange-500"><Icon name="mail" className="text-orange-500" /> {email}</a><div className="flex items-center gap-4"><Icon name="globe" className="text-orange-500" /> {website}</div></div></div><form action={`mailto:${email}`} method="post" encType="text/plain" className="rounded-3xl border border-orange-600/50 bg-zinc-950 p-7"><h3 className="mb-6 text-2xl font-black uppercase">Request Service</h3><div className="grid gap-4"><input name="Company Name" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-orange-500" placeholder="Company Name" /><input name="Contact Name" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-orange-500" placeholder="Contact Name" /><input name="Phone Number" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-orange-500" placeholder="Phone Number" /><input name="Truck or Trailer Type" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-orange-500" placeholder="Truck / Trailer Type" /><textarea name="Service Needed" className="min-h-32 rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-orange-500" placeholder="Tell us what you need" /><button type="submit" className="rounded-xl bg-orange-600 px-6 py-4 font-black uppercase text-black hover:bg-orange-500">Submit Request</button></div></form></div></section>
+        <section id="contact" className="px-4 py-20"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2"><div><p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-amber-400">Contact</p><h2 className="text-5xl font-black uppercase md:text-7xl">We Are Just A Call Away.</h2><p className="mt-5 text-lg text-zinc-300">Need emergency service or want to set up fleet maintenance? Reach out and we will help get your equipment back on the road.</p><div className="mt-8 space-y-4 text-xl font-bold"><a href={phoneHref} className="flex items-start gap-4 break-all hover:text-amber-400"><Icon name="phone" className="text-amber-400" /> {phone}</a><a href={`mailto:${email}`} className="flex items-start gap-4 break-all hover:text-amber-400"><Icon name="mail" className="text-amber-400" /> {email}</a><div className="flex items-start gap-4 break-all"><Icon name="globe" className="text-amber-400" /> {website}</div></div></div><form action={`mailto:${email}`} method="post" encType="text/plain" className="rounded-2xl border border-amber-600/50 bg-zinc-950 p-7"><h3 className="mb-6 text-2xl font-black uppercase">Request Service</h3><div className="grid gap-4"><input name="Company Name" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-amber-500" aria-label="Company Name" placeholder="Company Name" /><input name="Contact Name" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-amber-500" aria-label="Contact Name" placeholder="Contact Name" /><input type="tel" name="Phone Number" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-amber-500" aria-label="Phone Number" placeholder="Phone Number" /><input name="Truck or Trailer Type" className="rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-amber-500" aria-label="Truck / Trailer Type" placeholder="Truck / Trailer Type" /><textarea name="Service Needed" className="min-h-32 rounded-xl border border-zinc-800 bg-black px-4 py-4 text-white outline-none focus:border-amber-500" aria-label="Tell us what you need" placeholder="Tell us what you need" /><button type="submit" className="rounded-xl bg-amber-400 px-6 py-4 font-black uppercase text-black hover:bg-amber-300">Submit Request</button></div></form></div></section>
       </main>
 
-      <footer className="border-t border-orange-600/40 bg-zinc-950 px-4 py-8"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left"><div><div className="text-2xl font-black uppercase text-orange-600">AC Mobile Fleet Service LLC</div><div className="font-bold uppercase tracking-[0.25em] text-zinc-300">Keep Your Fleet Moving</div></div><div className="text-sm text-zinc-400">© 2026 AC Mobile Fleet Service LLC. Mobile truck, trailer, and fleet maintenance service in Southwest Ohio.</div></div></footer>
+      <footer className="border-t border-amber-600/40 bg-zinc-950 px-4 py-8"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left"><div><div className="text-2xl font-black uppercase text-amber-400">AC Mobile Fleet Service LLC</div><div className="font-bold uppercase tracking-[0.25em] text-zinc-300">Keep Your Fleet Moving</div></div><div className="text-sm text-zinc-400">© 2026 AC Mobile Fleet Service LLC. Mobile truck, trailer, and fleet maintenance service in Southwest Ohio.</div></div></footer>
     </div>
   );
 }

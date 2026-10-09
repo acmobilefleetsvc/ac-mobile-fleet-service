@@ -2,17 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; scroll-padding-top: 150px; }
+body { margin: 0; background: #070707; color: #f5f5f5; }
+::selection { background: #e6bb4c; color: #080808; }
+header { border-bottom: 2px solid #842323 !important; }
+h1, h2, h3 { text-wrap: balance; }
+main > section { position: relative; }
+#services, #fleet, #contact { background: linear-gradient(135deg, #0b0b0b, #151515); }
+#services h3 { color: #e6bb4c; }
+#services > div:last-child > div { border-top: 3px solid #842323; border-radius: 8px; }
+.hero-brand { border-bottom: 3px solid #842323; }
+.hero-brand > div { padding: 1.5rem; }
+.hero-brand h2 { font-size: 1.5rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #e6bb4c; outline-offset: 4px; }
+#contact svg { flex-shrink: 0; }
+@media (max-width: 639px) {
+ h1 { font-size: clamp(2.5rem, 10vw, 3.75rem) !important; }
+ h2 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+ #contact .text-xl { font-size: 1rem; }
+ html { scroll-padding-top: 120px; }
 }
-
-body {
-  margin: 0;
-  background: #000;
-  color: white;
-}
-
-::selection {
-  background: #ea580c;
-  color: #000;
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { transition: none !important; }
 }
